@@ -1,6 +1,6 @@
-## PCTD: Point Cloud Transformer Diffusion for Single-Image 3D Point Cloud Reconstruction
+## VT3D: A Visibility-Driven Transformer-Based Diffusion Model for Single-View 3D Point Cloud Reconstruction
 
-
+The source code will be released soon~
 
 ### Examples
 ![examples](./assets/examples.png)
