@@ -53,13 +53,6 @@ class PointCloudMultiViewModelConfig:
     image_size: int = '${dataset.image_size}'
     image_feature_model: str = 'vit_base_patch16_224_mae'  # or 'vit_base_patch16_224_mae' or 'identity' or 'vit_small_patch16_224_msn'
     w: float = 7.5
-    # TODO
-    # # New for the rebuttal
-    # use_naive_projection: bool = False
-    # use_feature_blur: bool = False
-
-    # Point cloud data arguments. Note these are here because the processing happens
-    # inside the model, rather than inside the dataset.
     scale_factor: float = "${dataset.scale_factor}"
 
 
@@ -89,31 +82,14 @@ class DatasetConfig:
 class PointCloudDatasetConfig(DatasetConfig):
     eval_split: str = 'val'
     max_points: int = 16_384
-    # image_size: int = 137
     image_size: int = 224
-    # image_size: int = 256
     restrict_model_ids: Optional[List] = None  # for only running on a subset of data points
-
-
-# @dataclass
-# class CO3DConfig(PointCloudDatasetConfig):
-#     type: str = 'co3dv2'
-#     # root: str = os.getenv('CO3DV2')
-#     root: str = '/media/lee/software/datasets/co3dv2'
-#     # root: str = 'E:/datasets/co3d'
-#     # root: str = '/mnt/e/datasets/co3d'
-#     category: str = 'hydrant'
-#     subset_name: str = 'fewview_dev'
-#     mask_images: bool = '${model.use_mask}'
 
 
 @dataclass
 class ShapeNetR2N2Config(PointCloudDatasetConfig):
     n_views: int = 1
-    # ubuntu: str = '/media/u401/project/phil'
-    ubuntu: str = '/mnt/d'
-    win: str = '/mnt/d'
-    dataset_path: str = (ubuntu if platform.system() == 'Linux' else win) + '/datasets/ShapeNetPart.v1'
+    dataset_path: str = '/mnt/d/datasets/ShapeNetPart.v1'
     model_path: str = dataset_path + '/%s/%s/model.obj'
     rendering_path: str = dataset_path + '/%s/%s/rendering'
     camera_path: str = dataset_path + '/%s/%s/rendering/rendering_metadata.txt'
