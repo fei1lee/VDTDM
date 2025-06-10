@@ -1,9 +1,7 @@
 ## VDTDM: A Visibility-Driven Transformer-Based Diffusion Model for Single-View 3D Point Cloud Reconstruction
 
-The source code will be released soon~
-
-### Examples
-![examples](./assets/examples.png)
+### Examples on ShapeNet
+![fig_5_R1.png](assets%2Ffig_5_R1.png)
 
 # Installation
 
