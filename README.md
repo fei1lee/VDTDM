@@ -62,5 +62,6 @@ python train.py
 ```
 
 
-this repository modified from [PC^2](https://github.com/lukemelas/projection-conditioned-point-cloud-diffusion).
+# Acknowledgements
+This repository modified from [PC^2](https://github.com/lukemelas/projection-conditioned-point-cloud-diffusion).
 Thanks to Luke's fantastic job for point cloud reconstruction. 
