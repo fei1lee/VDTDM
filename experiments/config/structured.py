@@ -212,7 +212,7 @@ class MultiViewConfig:
         'custom_hydra_run_dir',
         {'run': 'default'},
         {'logging': 'default'},
-        {'model': 'point_mamba'},
+        {'model': 'VDTDM'},
         {'dataset': 'shapenet_r2n2'},
         {'augmentations': 'default'},
         {'dataloader': 'default'},
