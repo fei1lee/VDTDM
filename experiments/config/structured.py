@@ -66,7 +66,7 @@ class PointCloudDiffusionModelConfig(PointCloudMultiViewModelConfig):
     n_points: int = 8192
 
 @dataclass
-class PointMambaConfig(PointCloudDiffusionModelConfig):
+class VDTDMConfig(PointCloudDiffusionModelConfig):
     dim: int = 768
     depth: int = 4
     mlp_dim: int = 3072
@@ -228,7 +228,7 @@ cs = ConfigStore.instance()
 cs.store(name='custom_hydra_run_dir', node=CustomHydraRunDir, package="hydra.run")
 cs.store(group='run', name='default', node=RunConfig)
 cs.store(group='logging', name='default', node=LoggingConfig)
-cs.store(group='model', name='point_mamba', node=PointMambaConfig)
+cs.store(group='model', name='VDTDM', node=VDTDMConfig)
 # cs.store(group='dataset', name='co3d', node=CO3DConfig)
 # TODO
 cs.store(group='dataset', name='shapenet_r2n2', node=ShapeNetR2N2Config)
